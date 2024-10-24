@@ -1,0 +1,396 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" version="24.7.6">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="4783" dy="2277" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="RradCy1Z5KlfBMAE3USt-122" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2728.67" y="745" width="1316" height="798" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-120" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=203;tabHeight=46;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry width="1316" height="776" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-121" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;view&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="62" y="4" width="70" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-103" value="MenuPrincipal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="561" y="396" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-105" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-103">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-106" value="&lt;u&gt;+ menuOpcoes(): int&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-103">
+          <mxGeometry y="34" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-107" value="MenuAluno" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="925" y="391" width="296" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-108" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-107">
+          <mxGeometry y="26" width="296" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-109" value="&lt;u&gt;+ dadosNovoAluno(): Aluno&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- listarTodosAlunos(cadAluno: CadastroAluno): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ MenuAluno(cadAluno: CadastroAluno): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lerMatricula(): String&lt;/u&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-107">
+          <mxGeometry y="34" width="296" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-111" value="MenuDisciplina" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="37" y="296" width="374" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-112" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-111">
+          <mxGeometry y="26" width="374" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-113" value="&lt;u&gt;+ dadosNovaDisciplina(): Disciplina&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- listarTodasDisciplinas(cadDisciplina: CadastroDisciplina): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ MenuDisciplina(cadDisciplina: CadastroDisciplina): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lerNomeDisciplina(): String&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lerCodigoDisciplina(): String&lt;/u&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-111">
+          <mxGeometry y="34" width="374" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-117" value="MenuTurmas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="458" y="80" width="599" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-118" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-117">
+          <mxGeometry y="26" width="599" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-119" value="&lt;u&gt;+ dadosNovaTurma(): Turma&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- imprimirChamada(cadTurma: CadastroTurma, cadProfessor: CadastroProfessor): void&lt;br&gt;&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lerCodigoTurma(): String&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- listarTurmasCadastradas(cadTurma: CadastroTurma): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- adicionarOuRemoverAlunos(cadTurma: CadastroTurma, cadAluno: CadastroAluno): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ MenuTurma(cadTurma: CadastroTurma, cadAluno: CadastroAluno, cadProfessor: CadastroProfessor): void&lt;/u&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-117">
+          <mxGeometry y="34" width="599" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-114" value="MenuProfessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-122">
+          <mxGeometry x="391" y="561" width="369" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-115" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-114">
+          <mxGeometry y="26" width="369" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-116" value="&lt;u&gt;+ dadosNovoProfessor(): Professor&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- listarTodosProfessores(cadProfessor: CadastroProfessor): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ MenuProfessor(cadProfessor: CadastroProfessor): void&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lerMatriculaFUB(): String&lt;/u&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-114">
+          <mxGeometry y="34" width="369" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-124" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-122" source="RradCy1Z5KlfBMAE3USt-103" target="RradCy1Z5KlfBMAE3USt-107">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="728" y="412" as="sourcePoint" />
+            <mxPoint x="888" y="412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-125" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.996;entryY=0.078;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-122" source="RradCy1Z5KlfBMAE3USt-103" target="RradCy1Z5KlfBMAE3USt-111">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="569" y="504" as="sourcePoint" />
+            <mxPoint x="729" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-126" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.496;exitY=1.09;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.593;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-122" source="RradCy1Z5KlfBMAE3USt-106" target="RradCy1Z5KlfBMAE3USt-114">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="569" y="504" as="sourcePoint" />
+            <mxPoint x="729" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-127" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.51;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-122" source="RradCy1Z5KlfBMAE3USt-103" target="RradCy1Z5KlfBMAE3USt-119">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="270" as="sourcePoint" />
+            <mxPoint x="790" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-38" value="" style="group;strokeWidth=1;" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1048.67" y="694" width="1508" height="936" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-35" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=232;tabHeight=44;tabPosition=left;html=1;whiteSpace=wrap;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry width="1508" height="827" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-36" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;app&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22group%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22-1871%22%20y%3D%2281%22%20width%3D%221508%22%20height%3D%22936%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%22%20style%3D%22shape%3Dfolder%3BfontStyle%3D1%3BspacingTop%3D10%3BtabWidth%3D232%3BtabHeight%3D44%3BtabPosition%3Dleft%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3BlabelPosition%3Dcenter%3BverticalLabelPosition%3Dmiddle%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20width%3D%221508%22%20height%3D%22827%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%26lt%3Bb%26gt%3B%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2024px%3B%26quot%3B%26gt%3Bapp%26lt%3B%2Ffont%26gt%3B%26lt%3B%2Fb%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2277%22%20width%3D%2261%22%20height%3D%2241%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22Turma%22%20style%3D%22swimlane%3BfontStyle%3D1%3Balign%3Dcenter%3BverticalAlign%3Dtop%3BchildLayout%3DstackLayout%3Bhorizontal%3D1%3BstartSize%3D26%3BhorizontalStack%3D0%3BresizeParent%3D1%3BresizeParentMax%3D0%3BresizeLast%3D0%3Bcollapsible%3D1%3BmarginBottom%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%221071%22%20y%3D%22308%22%20width%3D%22393%22%20height%3D%22488%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22-%20codigoTurma%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20sala%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20professorAssociado%3A%20String%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20disciplina%3A%20String%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20qtdMaxAlunos%3A%20int%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%225%22%3E%3CmxGeometry%20y%3D%2226%22%20width%3D%22393%22%20height%3D%22149%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22%22%20style%3D%22line%3BstrokeWidth%3D1%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BspacingTop%3D-1%3BspacingLeft%3D3%3BspacingRight%3D3%3Brotatable%3D0%3BlabelPosition%3Dright%3Bpoints%3D%5B%5D%3BportConstraint%3Deastwest%3BstrokeColor%3Dinherit%3B%22%20vertex%3D%221%22%20parent%3D%225%22%3E%3CmxGeometry%20y%3D%22175%22%20width%3D%22393%22%20height%3D%228%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22%2B%20Turma(codigoTurma%3A%20String%2C%20sala%3A%20String%2C%20professorAssociado%3A%20String%2C%20disciplina%3A%20String%2C%20qtdMaxAlunos%3A%20int)%3A%20void%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getCodigoTurma()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getSala()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getProfessorAssociado()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getDisciplina()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getQtdMaxAlunos()%3A%20int%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getAlunos()%3A%20Aluno%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20adicionarAluno(aluno%3A%20Aluno)%3A%20boolean%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20removeAluno(aluno%3A%20Aluno)%3A%20boolean%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20toString()%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%225%22%3E%3CmxGeometry%20y%3D%22183%22%20width%3D%22393%22%20height%3D%22305%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20value%3D%22Disciplina%22%20style%3D%22swimlane%3BfontStyle%3D1%3Balign%3Dcenter%3BverticalAlign%3Dtop%3BchildLayout%3DstackLayout%3Bhorizontal%3D1%3BstartSize%3D26%3BhorizontalStack%3D0%3BresizeParent%3D1%3BresizeParentMax%3D0%3BresizeLast%3D0%3Bcollapsible%3D1%3BmarginBottom%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22677%22%20y%3D%22105%22%20width%3D%22371%22%20height%3D%22209%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22-%20nomeDisciplina%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20codigoDisciplina%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%229%22%3E%3CmxGeometry%20y%3D%2226%22%20width%3D%22371%22%20height%3D%2256%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2211%22%20value%3D%22%22%20style%3D%22line%3BstrokeWidth%3D1%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BspacingTop%3D-1%3BspacingLeft%3D3%3BspacingRight%3D3%3Brotatable%3D0%3BlabelPosition%3Dright%3Bpoints%3D%5B%5D%3BportConstraint%3Deastwest%3BstrokeColor%3Dinherit%3B%22%20vertex%3D%221%22%20parent%3D%229%22%3E%3CmxGeometry%20y%3D%2282%22%20width%3D%22371%22%20height%3D%228%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2212%22%20value%3D%22%2B%20Disciplina(nomeDisciplina%3A%20String%2C%20codigoDisciplina%3A%20String)%3A%20void%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getNomeDisciplina()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getCodigoDisciplina()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20toString()%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%229%22%3E%3CmxGeometry%20y%3D%2290%22%20width%3D%22371%22%20height%3D%22119%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2213%22%20value%3D%22Aluno%22%20style%3D%22swimlane%3BfontStyle%3D1%3Balign%3Dcenter%3BverticalAlign%3Dtop%3BchildLayout%3DstackLayout%3Bhorizontal%3D1%3BstartSize%3D26%3BhorizontalStack%3D0%3BresizeParent%3D1%3BresizeParentMax%3D0%3BresizeLast%3D0%3Bcollapsible%3D1%3BmarginBottom%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22422%22%20y%3D%22455%22%20width%3D%22345%22%20height%3D%22223%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2214%22%20value%3D%22-%20matricula%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20curso%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2213%22%3E%3CmxGeometry%20y%3D%2226%22%20width%3D%22345%22%20height%3D%2253%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2215%22%20value%3D%22%22%20style%3D%22line%3BstrokeWidth%3D1%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BspacingTop%3D-1%3BspacingLeft%3D3%3BspacingRight%3D3%3Brotatable%3D0%3BlabelPosition%3Dright%3Bpoints%3D%5B%5D%3BportConstraint%3Deastwest%3BstrokeColor%3Dinherit%3B%22%20vertex%3D%221%22%20parent%3D%2213%22%3E%3CmxGeometry%20y%3D%2279%22%20width%3D%22345%22%20height%3D%228%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2216%22%20value%3D%22%2B%20Aluno(nome%3A%20String%2C%20cpf%3A%20String%2C%20email%3A%20String%2C%20matricula%3A%20String%2C%20curso%3A%20String)%3A%20void%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getMatricula()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getCurso()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20toString()%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2213%22%3E%3CmxGeometry%20y%3D%2287%22%20width%3D%22345%22%20height%3D%22136%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2217%22%20value%3D%22%26lt%3Bb%26gt%3B%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2012px%3B%26quot%3B%26gt%3B-%20alunos%3A%20Set%26amp%3Blt%3B%26amp%3Bgt%3B%26lt%3B%2Ffont%26gt%3B%26lt%3B%2Fb%26gt%3B%22%20style%3D%22endArrow%3Dblock%3BendFill%3D1%3Bhtml%3D1%3BedgeStyle%3DorthogonalEdgeStyle%3Balign%3Dleft%3BverticalAlign%3Dtop%3Brounded%3D0%3BexitX%3D0%3BexitY%3D0.5%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D1.003%3BentryY%3D0.535%3BentryDx%3D0%3BentryDy%3D0%3BentryPerimeter%3D0%3B%22%20edge%3D%221%22%20parent%3D%222%22%20source%3D%226%22%20target%3D%2216%22%3E%3CmxGeometry%20x%3D%22-0.5915%22%20y%3D%22-21%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%222125%22%20y%3D%22585%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%222285%22%20y%3D%22585%22%20as%3D%22targetPoint%22%2F%3E%3CmxPoint%20y%3D%22-1%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2218%22%20value%3D%22%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2012px%3B%26quot%3B%26gt%3B%26lt%3Bb%26gt%3B*%26lt%3B%2Fb%26gt%3B%26lt%3B%2Ffont%26gt%3B%22%20style%3D%22edgeLabel%3Bresizable%3D0%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dbottom%3B%22%20connectable%3D%220%22%20vertex%3D%221%22%20parent%3D%2217%22%3E%3CmxGeometry%20x%3D%22-1%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-300%22%20y%3D%22202%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2219%22%20value%3D%22Professor%22%20style%3D%22swimlane%3BfontStyle%3D1%3Balign%3Dcenter%3BverticalAlign%3Dtop%3BchildLayout%3DstackLayout%3Bhorizontal%3D1%3BstartSize%3D26%3BhorizontalStack%3D0%3BresizeParent%3D1%3BresizeParentMax%3D0%3BresizeLast%3D0%3Bcollapsible%3D1%3BmarginBottom%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2255%22%20y%3D%22455%22%20width%3D%22344%22%20height%3D%22223%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2220%22%20value%3D%22-%20areaFormacao%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20matriculaFUB%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2219%22%3E%3CmxGeometry%20y%3D%2226%22%20width%3D%22344%22%20height%3D%2253%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2221%22%20value%3D%22%22%20style%3D%22line%3BstrokeWidth%3D1%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BspacingTop%3D-1%3BspacingLeft%3D3%3BspacingRight%3D3%3Brotatable%3D0%3BlabelPosition%3Dright%3Bpoints%3D%5B%5D%3BportConstraint%3Deastwest%3BstrokeColor%3Dinherit%3B%22%20vertex%3D%221%22%20parent%3D%2219%22%3E%3CmxGeometry%20y%3D%2279%22%20width%3D%22344%22%20height%3D%228%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2222%22%20value%3D%22%2B%20Professor(nome%3A%20String%2C%20cpf%3A%20String%2C%20email%3A%20String%2C%20areaFormacao%3A%20String%2C%20matriculaFUB%3A%20String)%3A%20void%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getAreaFormacao()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getMatriculaFUB()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20toString()%3A%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2219%22%3E%3CmxGeometry%20y%3D%2287%22%20width%3D%22344%22%20height%3D%22136%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2223%22%20value%3D%22PessoaFisica%22%20style%3D%22swimlane%3BfontStyle%3D1%3Balign%3Dcenter%3BverticalAlign%3Dtop%3BchildLayout%3DstackLayout%3Bhorizontal%3D1%3BstartSize%3D26%3BhorizontalStack%3D0%3BresizeParent%3D1%3BresizeParentMax%3D0%3BresizeLast%3D0%3Bcollapsible%3D1%3BmarginBottom%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22250%22%20y%3D%2289%22%20width%3D%22303%22%20height%3D%22264%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2224%22%20value%3D%22-%20nome%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bdiv%26gt%3B-%20cpf%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B-%20email%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2223%22%3E%3CmxGeometry%20y%3D%2226%22%20width%3D%22303%22%20height%3D%2284%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2225%22%20value%3D%22%22%20style%3D%22line%3BstrokeWidth%3D1%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BspacingTop%3D-1%3BspacingLeft%3D3%3BspacingRight%3D3%3Brotatable%3D0%3BlabelPosition%3Dright%3Bpoints%3D%5B%5D%3BportConstraint%3Deastwest%3BstrokeColor%3Dinherit%3B%22%20vertex%3D%221%22%20parent%3D%2223%22%3E%3CmxGeometry%20y%3D%22110%22%20width%3D%22303%22%20height%3D%228%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2226%22%20value%3D%22%26lt%3Bdiv%26gt%3B%2B%20PessoaFisica(nome%3A%20String%2C%20cpf%3A%20String%2C%20email%3A%20String)%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%2B%20getNome()%3A%20String%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getCpf()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20getEmail()%3A%20String%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%2B%20toString()%3B%20String%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dleft%3BverticalAlign%3Dtop%3BspacingLeft%3D4%3BspacingRight%3D4%3Boverflow%3Dhidden%3Brotatable%3D0%3Bpoints%3D%5B%5B0%2C0.5%5D%2C%5B1%2C0.5%5D%5D%3BportConstraint%3Deastwest%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%2223%22%3E%3CmxGeometry%20y%3D%22118%22%20width%3D%22303%22%20height%3D%22146%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2227%22%20value%3D%22Extends%22%20style%3D%22endArrow%3Dblock%3BendSize%3D16%3BendFill%3D0%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.5%3BexitY%3D0%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.179%3BentryY%3D1.024%3BentryDx%3D0%3BentryDy%3D0%3BentryPerimeter%3D0%3B%22%20edge%3D%221%22%20parent%3D%222%22%20source%3D%2219%22%20target%3D%2226%22%3E%3CmxGeometry%20width%3D%22160%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%222244%22%20y%3D%22386%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%222144%22%20y%3D%22245%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2228%22%20value%3D%22Extends%22%20style%3D%22endArrow%3Dblock%3BendSize%3D16%3BendFill%3D0%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.5%3BexitY%3D0%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.896%3BentryY%3D1.005%3BentryDx%3D0%3BentryDy%3D0%3BentryPerimeter%3D0%3B%22%20edge%3D%221%22%20parent%3D%222%22%20source%3D%2213%22%20target%3D%2226%22%3E%3CmxGeometry%20width%3D%22160%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%221997%22%20y%3D%22355%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%222167%22%20y%3D%22247%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="77" width="61" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-25" value="Turma" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="1071" y="308" width="393" height="488" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-26" value="- codigoTurma: String&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- sala: String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- professorAssociado: String&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- disciplina: String&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- qtdMaxAlunos: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-25">
+          <mxGeometry y="26" width="393" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-27" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-25">
+          <mxGeometry y="175" width="393" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-28" value="+ Turma(codigoTurma: String, sala: String, professorAssociado: String, disciplina: String, qtdMaxAlunos: int): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getCodigoTurma(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getSala(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getProfessorAssociado(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getDisciplina(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getQtdMaxAlunos(): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getAlunos(): Aluno&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ adicionarAluno(aluno: Aluno): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ removeAluno(aluno: Aluno): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-25">
+          <mxGeometry y="183" width="393" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-21" value="Disciplina" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="677" y="105" width="371" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-22" value="- nomeDisciplina: String&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- codigoDisciplina: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-21">
+          <mxGeometry y="26" width="371" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-21">
+          <mxGeometry y="82" width="371" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-24" value="+ Disciplina(nomeDisciplina: String, codigoDisciplina: String): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getNomeDisciplina(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getCodigoDisciplina(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-21">
+          <mxGeometry y="90" width="371" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-14" value="Aluno" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="422" y="455" width="345" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-15" value="- matricula: String&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- curso: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-14">
+          <mxGeometry y="26" width="345" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-14">
+          <mxGeometry y="79" width="345" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-17" value="+ Aluno(nome: String, cpf: String, email: String, matricula: String, curso: String): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getMatricula(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getCurso(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-14">
+          <mxGeometry y="87" width="345" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-29" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;- alunos: Set&amp;lt;&amp;gt;&lt;/font&gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.535;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-38" source="RradCy1Z5KlfBMAE3USt-26" target="RradCy1Z5KlfBMAE3USt-17">
+          <mxGeometry x="-0.5915" y="-21" relative="1" as="geometry">
+            <mxPoint x="2125" y="585" as="sourcePoint" />
+            <mxPoint x="2285" y="585" as="targetPoint" />
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-30" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-29">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-300" y="202" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-9" value="Professor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="55" y="455" width="344" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-10" value="- areaFormacao: String&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- matriculaFUB: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-9">
+          <mxGeometry y="26" width="344" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-9">
+          <mxGeometry y="79" width="344" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-12" value="+ Professor(nome: String, cpf: String, email: String, areaFormacao: String, matriculaFUB: String): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getAreaFormacao(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getMatriculaFUB(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-9">
+          <mxGeometry y="87" width="344" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-5" value="PessoaFisica" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-38">
+          <mxGeometry x="250" y="89" width="303" height="264" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-6" value="- nome: String&lt;div&gt;&lt;br&gt;&lt;div&gt;- cpf: String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- email: String&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-5">
+          <mxGeometry y="26" width="303" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-5">
+          <mxGeometry y="110" width="303" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-8" value="&lt;div&gt;+ PessoaFisica(nome: String, cpf: String, email: String)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ getNome(): String&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getCpf(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getEmail(): String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ toString(); String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-5">
+          <mxGeometry y="118" width="303" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-20" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.179;entryY=1.024;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-38" source="RradCy1Z5KlfBMAE3USt-9" target="RradCy1Z5KlfBMAE3USt-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2244" y="386" as="sourcePoint" />
+            <mxPoint x="2144" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-19" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.896;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-38" source="RradCy1Z5KlfBMAE3USt-14" target="RradCy1Z5KlfBMAE3USt-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1997" y="355" as="sourcePoint" />
+            <mxPoint x="2167" y="247" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-102" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="589.6700000000001" y="640" width="1751" height="1800" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-100" value="" style="group" vertex="1" connectable="0" parent="RradCy1Z5KlfBMAE3USt-102">
+          <mxGeometry y="997" width="1751" height="803" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-69" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=197;tabHeight=60;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-100">
+          <mxGeometry width="1751" height="803" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-99" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;cadastros&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-100">
+          <mxGeometry x="30" y="7" width="131" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-43" value="CadastroAluno" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-102">
+          <mxGeometry x="736" y="1157" width="393" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-45" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-43">
+          <mxGeometry y="26" width="393" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-46" value="+ CadastroAluno(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ cadastrarAluno(a: Aluno): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ pesquisarAluno(matriculaAluno: String): Aluno&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ removerAluno(a: Aluno): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ atualizarAluno(matricula: String, a: Aluno): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ listarTodosAlunos(): List&amp;lt;Aluno&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-43">
+          <mxGeometry y="34" width="393" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-47" value="&lt;b&gt;- alunos: List&amp;lt;&amp;gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.519;exitY=0.002;exitDx=0;exitDy=0;entryX=0.464;entryY=1.012;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-43">
+          <mxGeometry x="-0.8619" y="-13" relative="1" as="geometry">
+            <mxPoint x="685" y="1005.3699999999999" as="sourcePoint" />
+            <mxPoint x="1056.58" y="732.0020000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="940" y="782" />
+              <mxPoint x="1057" y="782" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-48" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-47">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="123" y="-408" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-50" value="CadastroDisciplina" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-102">
+          <mxGeometry x="147" y="1149" width="393" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-51" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-50">
+          <mxGeometry y="26" width="393" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-52" value="+ CadastroDisciplina(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ cadastrarDisciplina(d: Disciplina): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ pesquisarDisciplina(codigoDisciplina: String): Disciplina&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ removerDisciplina(d: Disciplina): boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ atualizarDisciplina(codigoDisciplina: String, d: Disciplina): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ listarTodasDisciplinas(): List&amp;lt;Disciplina&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-50">
+          <mxGeometry y="34" width="393" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-53" value="&lt;b&gt;- disciplinas: List&amp;lt;&amp;gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.17;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.409;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-50" target="RradCy1Z5KlfBMAE3USt-21">
+          <mxGeometry x="-0.9672" y="-7" relative="1" as="geometry">
+            <mxPoint x="123" y="1093" as="sourcePoint" />
+            <mxPoint x="311" y="217" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="214" />
+              <mxPoint x="1288" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-54" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-53">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1076" y="-1000" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-55" value="CadastroProfessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-102">
+          <mxGeometry x="363" y="1404" width="393" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-56" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-55">
+          <mxGeometry y="26" width="393" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-57" value="+ CadastroProfessor(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ cadastrarProfessor(p: Professor): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ pesquisarProfessor(matriculaFUB: String): Professor&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ removerProfessor(p: Professor): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ atualizarProfessor(matriculaFUB: String, p: Professor): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ listarTodosProfessores(): List&amp;lt;Professor&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-55">
+          <mxGeometry y="34" width="393" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-58" value="&lt;b&gt;- professores: List&amp;lt;&amp;gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.681;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.49;entryY=1.015;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-55" target="RradCy1Z5KlfBMAE3USt-12">
+          <mxGeometry x="-0.9142" y="-8" relative="1" as="geometry">
+            <mxPoint x="646" y="1359.9" as="sourcePoint" />
+            <mxPoint x="683.192" y="735.0360000000002" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="631" y="1082" />
+              <mxPoint x="684" y="1082" />
+              <mxPoint x="684" y="737" />
+              <mxPoint x="683" y="737" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-59" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-58">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="57" y="-647" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-60" value="CadastroTurma" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-102">
+          <mxGeometry x="1109" y="1451" width="460" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-61" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-60">
+          <mxGeometry y="26" width="460" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-62" value="+ CadastroTurma(cadProf: CadastroProfessor, cadDisc: CadastroDisciplina): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ cadastrarTurma(t: Turma): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ procurarTurma(codigoTurma: String): Turma&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ excluirTurma(excluir: Turma): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getTurmas(): List&amp;lt;Turma&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ listarTodosProfessores(): List&amp;lt;Professor&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ adicionarAlunoATurma(codigoTurma: String, aluno: Aluno): int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ removerAlunoDaTurma(codigoTurma: String, aluno: Aluno): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-60">
+          <mxGeometry y="34" width="460" height="226" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-63" value="&lt;b&gt;- turmas: List&amp;lt;&amp;gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.002;entryY=0.544;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-60" target="RradCy1Z5KlfBMAE3USt-28">
+          <mxGeometry x="-0.7876" y="-9" relative="1" as="geometry">
+            <mxPoint x="1515" y="1594" as="sourcePoint" />
+            <mxPoint x="1514" y="895" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1339" y="1406" />
+              <mxPoint x="1306" y="1406" />
+              <mxPoint x="1306" y="711" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-64" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-63">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="178" y="-714" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-65" value="&lt;b&gt;- cadastroProfessor&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=-0.002;exitY=0.328;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.998;entryY=0.437;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-62" target="RradCy1Z5KlfBMAE3USt-57">
+          <mxGeometry x="-0.159" y="-24" relative="1" as="geometry">
+            <mxPoint x="906" y="1480" as="sourcePoint" />
+            <mxPoint x="1066" y="1480" as="targetPoint" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-66" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-65">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-344" y="-48" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-67" value="&lt;b&gt;- cadastroDisciplina&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.349;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.003;exitY=0.687;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="RradCy1Z5KlfBMAE3USt-102" source="RradCy1Z5KlfBMAE3USt-62" target="RradCy1Z5KlfBMAE3USt-52">
+          <mxGeometry x="-0.7576" y="-24" relative="1" as="geometry">
+            <mxPoint x="1099" y="1640" as="sourcePoint" />
+            <mxPoint x="791" y="1737" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1074" y="1640" />
+              <mxPoint x="284" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-68" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-67">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-822" y="-264" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-128" value="Principal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2765.67" y="1811" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-130" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-128">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-131" value="&lt;u&gt;+ main(args: String[]): void&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RradCy1Z5KlfBMAE3USt-128">
+          <mxGeometry y="34" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-132" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;cadTurma&lt;/font&gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RradCy1Z5KlfBMAE3USt-128" target="RradCy1Z5KlfBMAE3USt-62">
+          <mxGeometry x="-0.8465" y="-24" relative="1" as="geometry">
+            <mxPoint x="2376.67" y="1845" as="sourcePoint" />
+            <mxPoint x="2536.67" y="1845" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-133" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-132">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-601" y="352" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-134" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;cadAluno&lt;/b&gt;&lt;/span&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1.001;entryY=0.075;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RradCy1Z5KlfBMAE3USt-128" target="RradCy1Z5KlfBMAE3USt-43">
+          <mxGeometry x="-0.9505" y="-9" relative="1" as="geometry">
+            <mxPoint x="2418.67" y="1706" as="sourcePoint" />
+            <mxPoint x="2578.67" y="1706" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2805.67" y="1588" />
+              <mxPoint x="2068.67" y="1588" />
+              <mxPoint x="2068.67" y="1813" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-135" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-134">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-1080" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-136" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;cadProfessor&lt;/b&gt;&lt;/span&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.447;exitY=1.115;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.459;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RradCy1Z5KlfBMAE3USt-131" target="RradCy1Z5KlfBMAE3USt-57">
+          <mxGeometry x="-0.9874" y="4" relative="1" as="geometry">
+            <mxPoint x="2799.67" y="1950" as="sourcePoint" />
+            <mxPoint x="1235.67" y="2603" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2837.67" y="2483" />
+              <mxPoint x="1132.67" y="2483" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-137" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-136">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-1699" y="400" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-138" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;cadDisciplina&lt;/font&gt;&lt;/b&gt;" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.207;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RradCy1Z5KlfBMAE3USt-128" target="RradCy1Z5KlfBMAE3USt-52">
+          <mxGeometry x="-0.9917" y="24" relative="1" as="geometry">
+            <mxPoint x="3056.67" y="1836" as="sourcePoint" />
+            <mxPoint x="509.6700000000001" y="1810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2984.67" y="1841" />
+              <mxPoint x="2984.67" y="2542" />
+              <mxPoint x="539.6700000000001" y="2542" />
+              <mxPoint x="539.6700000000001" y="1859" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RradCy1Z5KlfBMAE3USt-139" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RradCy1Z5KlfBMAE3USt-138">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-2205" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
