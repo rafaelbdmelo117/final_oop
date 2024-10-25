@@ -40,15 +40,17 @@ public class MenuProfessor {
 
                 boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}") && nome.replace(" ", "").length() >= 4;
                 boolean cpfValido = cpf.matches("\\d{11}");
+                boolean emailValido = email.contains("@");
                 boolean matriculaValida = matriculaFUB.matches("\\d{9}");
                 boolean areaFormacaoValida = areaFormacao.matches("[\\p{L} .'-]{4,}") && areaFormacao.replace(" ", "").length() >= 4;
                 
-                if (nomeValido && cpfValido && matriculaValida && areaFormacaoValida) {
+                if (nomeValido && cpfValido && emailValido && matriculaValida && areaFormacaoValida) {
                     return new Professor(nome, cpf, email, areaFormacao, matriculaFUB);
                 } else {
                     StringBuilder mensagemErro = new StringBuilder("Dados inválidos:\n");
                     if (!nomeValido) mensagemErro.append(" - Nome deve conter apenas letras e ter no mínimo 4 letras.\n");
                     if (!cpfValido) mensagemErro.append(" - CPF deve conter 11 dígitos.\n");
+                    if (!emailValido) mensagemErro.append(" - Insira um email válido.\n");
                     if (!matriculaValida) mensagemErro.append(" - Matrícula FUB deve conter 9 dígitos.\n");
                     if (!areaFormacaoValida) mensagemErro.append(" - Área de Formação deve conter apenas letras e ter no mínimo 4 letras.\n");
                     JOptionPane.showMessageDialog(null, mensagemErro.toString());
