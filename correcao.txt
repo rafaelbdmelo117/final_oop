@@ -1,0 +1,53 @@
+Plano de ação:
+1. Rever e reentender o código.
+2. Procurar na correção o que precisa ser corrigido
+3. Estudar o assunto do que precisa ser corrigido
+4. Modificar e testar o código
+5. Corrigir o diagrama UML
+6. Corrigir o Read.me
+7. Enviar o link do repositório para o professor
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+Oi, Giovana, bom dia! 
+Seguem os comentários da correção do trabalho. 
+Att. André Lanna
+
+Correção do TP
+-----------------------------------------------------------------------------------------------------------------
+ Critério    |Nota 
+-----------------------------------------------------------------------------------------------------------------
+ Critério 1 | 00 |
+ Critério 2 | 20 |
+ Critério 3 | 10 |
+ TOTAL       | 30 |
+
+Observações gerais 
+ - Nenhuma das classes de exceção foram criadas. (-15 pontos)
+ - Cadastros professor e aluno permitem campo e-mail em branco. (-20 pontos) aluno já corrigido
+ - Não há tratamento de exceções. (-20 pontos) 
+ - Diagrama UML não apresentou as classes de exceção (-15 pontos)
+
+Critério 1 Classes de exceção (15 pontos)
+ - As classes de exceção CampoEmBrancoException,
+   DisciplinaNaoAtribuidaException e ProfessorNaoAtribuidoException devem
+   ter sido criadas e lançadas. (-5 pontos para cada classe de exceção não
+   criada e utilizada)
+
+Critério 2 Implementação dos cadastros (60 pontos)
+ - Cadastro de alunos deve estar finalizado. (-10 pontos, se não estiver
+   finalizado)
+ - Cadastros de disciplinas, turmas e professores devem estar finalizados. (-30
+   pontos, -10 pontos por cadastro que não esteja completo em suas operações
+   CRUD). 
+ - Todos os cadastros devem lançar e tratar as exceções solicitadas no enunciado
+   do trabalho. (-20 pontos caso não tenha lançamento e tratamento das exceções
+   solicitadas no enunciado, -5 pontos para cada exceção não lançada ou não
+   tratada adequadamente limitados a -20 pontos)
+
+Critério 3 Documentação (25 pontos)
+ - Documentação através de diagrama de classes UML deve estar finalizado. (-25
+   pontos em caso de ausência do diagrama, -5 pontos por erro no diagrama de
+   classes, limitado a 25 pontos)

@@ -40,15 +40,17 @@ public class MenuAluno {
 
                 boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
                 boolean cpfValido = cpf.matches("\\d{11}");
+                boolean emailValido = email.contains("@");
                 boolean matriculaValida = matricula.matches("\\d{9}");
                 boolean cursoValido = curso.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
                 
-                if (nomeValido && cpfValido && matriculaValida && cursoValido) {
+                if (nomeValido && cpfValido && emailValido && matriculaValida && cursoValido) {
                     return new Aluno(nome, cpf, email, matricula, curso);
                 } else {
                     StringBuilder mensagemErro = new StringBuilder("Dados inválidos:\n");
                     if (!nomeValido) mensagemErro.append(" - Nome deve conter pelo menos 4 caracteres e pode incluir letras acentuadas e caracteres especiais como espaço, ponto, apóstrofo e hífen.\n");
                     if (!cpfValido) mensagemErro.append(" - CPF deve conter 11 dígitos.\n");
+                    if (!emailValido) mensagemErro.append(" - Insira um email válido.\n");
                     if (!matriculaValida) mensagemErro.append(" - Matrícula deve conter 9 dígitos.\n");
                     if (!cursoValido) mensagemErro.append(" - Curso deve conter pelo menos 4 caracteres e pode incluir letras acentuadas e caracteres especiais.\n");
                     JOptionPane.showMessageDialog(null, mensagemErro.toString());
@@ -87,7 +89,7 @@ public class MenuAluno {
             
             // Verifica se o usuário clicou em "Cancelar" ou fechou a janela
             if (strOpcao == null) {
-                return; // Sai do método sem exibir "Opção inválida"
+                return; //Sai do método sem exibir "Opção inválida"
             }
             
             try {
