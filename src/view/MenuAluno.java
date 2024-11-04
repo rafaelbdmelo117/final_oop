@@ -179,17 +179,13 @@ public class MenuAluno {
     }
 
     private static String lerMatricula()  throws CampoEmBrancoException {
-        try {
-            while (true) {
-                String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
-                if (matricula.matches("\\d{9}")) {
-                    return matricula;
-                } else {
-                    JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos.");
-                }
+        while (true) {
+            String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
+            if (matricula.matches("\\d{9}")) {
+                return matricula;
+            } else {
+                JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos.");
             }
-        } catch (CampoEmBrancoException cbe) {
-            JOptionPane.showMessageDialog(null, "Erro: "+ cbe.getMessage());
         }
     }
 }
