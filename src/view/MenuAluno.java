@@ -1,6 +1,7 @@
 package view;
 
 import app.Aluno;
+import app.CampoEmBrancoException;
 import cadastros.CadastroAluno;
 import java.awt.GridLayout;
 import java.util.List;
@@ -8,7 +9,7 @@ import javax.swing.*;
 
 public class MenuAluno {
 
-    public static Aluno dadosNovoAluno() {
+    public static Aluno dadosNovoAluno() throws CampoEmBrancoException {
         JTextField nomeField = new JTextField(15);
         JTextField cpfField = new JTextField(11);
         JTextField emailField = new JTextField(20);
@@ -37,6 +38,10 @@ public class MenuAluno {
                 String email = emailField.getText();
                 String matricula = matriculaField.getText();
                 String curso = cursoField.getText();
+
+                if (nome.isEmpty() || cpf.isEmpty() || email.isEmpty() || matricula.isEmpty() || curso.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou um ou mais campos em branco.");
+                }
 
                 boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
                 boolean cpfValido = cpf.matches("\\d{11}");
@@ -74,7 +79,7 @@ public class MenuAluno {
         }
     }
 
-    public static void MenuAluno(CadastroAluno cadAluno) {
+    public static void MenuAluno(CadastroAluno cadAluno) throws CampoEmBrancoException {
         String txt = "Informe a opção desejada \n"
                 + "1 - Cadastrar aluno\n"
                 + "2 - Pesquisar aluno\n"
@@ -84,95 +89,107 @@ public class MenuAluno {
                 + "0 - Voltar para menu anterior";
 
         int opcao = -1;
-        do {
-            String strOpcao = JOptionPane.showInputDialog(txt);
-            
-            // Verifica se o usuário clicou em "Cancelar" ou fechou a janela
-            if (strOpcao == null) {
-                return; //Sai do método sem exibir "Opção inválida"
-            }
-            
-            try {
-                opcao = Integer.parseInt(strOpcao);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha um número.");
-                continue;
-            }
+        try {
+            do {
+                String strOpcao = JOptionPane.showInputDialog(txt);
 
-            switch (opcao) {
-                case 1 -> {
-                    Aluno novoAluno = dadosNovoAluno();
-                    if (novoAluno != null) {
-                        int resultado = cadAluno.cadastrarAluno(novoAluno);
-                        switch (resultado) {
-                            case -1 -> JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. Matrícula já existente.");
-                            case -2 -> JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. CPF já existente.");
-                            default -> JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso.");
+                // Verifica se o usuário clicou em "Cancelar" ou fechou a janela
+                if (strOpcao == null) {
+                    return; //Sai do método sem exibir "Opção inválida"
+                }
+
+                try {
+                    opcao = Integer.parseInt(strOpcao);
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha um número.");
+                    continue;
+                }
+
+                switch (opcao) {
+                    case 1 -> {
+                        try {
+                            Aluno novoAluno = dadosNovoAluno();
+                            int resultado = cadAluno.cadastrarAluno(novoAluno);
+                                switch (resultado) {
+                                    case -1 ->
+                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. Matrícula já existente.");
+                                    case -2 ->
+                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. CPF já existente.");
+                                    default -> JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso.");
+                                }
+                            } catch (CampoEmBrancoException cbe) {
+                                JOptionPane.showMessageDialog(null, "Erro: " + cbe.getMessage());
                         }
                     }
-                }
 
-                case 2 -> {
-                    String matricula = lerMatricula();
-                    Aluno a = cadAluno.pesquisarAluno(matricula);
-                    if (a != null) {
-                        JOptionPane.showMessageDialog(null, a.toString());
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Aluno não encontrado.");
-                    }
-                }
-
-                case 3 -> {
-                    String matricula = lerMatricula();
-                    Aluno alunoExistente = cadAluno.pesquisarAluno(matricula);
-                    if (alunoExistente != null) {
-                        Aluno novoCadastro = dadosNovoAluno();
-                        if (novoCadastro != null) {
-                            boolean atualizado = cadAluno.atualizarAluno(matricula, novoCadastro);
-                            if (atualizado) {
-                                JOptionPane.showMessageDialog(null, "Cadastro atualizado.");
-                            } else {
-                                JOptionPane.showMessageDialog(null, "Erro ao atualizar o cadastro.");
-                            }
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
-                    }
-                }
-
-                case 4 -> {
-                    String matricula = lerMatricula();
-                    Aluno remover = cadAluno.pesquisarAluno(matricula);
-                    if (remover != null) {
-                        boolean removido = cadAluno.removerAluno(remover);
-                        if (removido) {
-                            JOptionPane.showMessageDialog(null, "Aluno removido do cadastro.");
+                    case 2 -> {
+                        String matricula = lerMatricula();
+                        Aluno a = cadAluno.pesquisarAluno(matricula);
+                        if (a != null) {
+                            JOptionPane.showMessageDialog(null, a.toString());
                         } else {
-                            JOptionPane.showMessageDialog(null, "Erro ao remover aluno.");
+                            JOptionPane.showMessageDialog(null, "Aluno não encontrado.");
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
                     }
-                }
-                
-                case 5 -> listarTodosAlunos(cadAluno);
 
-                case 0 -> {
-                }
+                    case 3 -> {
+                        String matricula = lerMatricula();
+                        Aluno alunoExistente = cadAluno.pesquisarAluno(matricula);
+                        if (alunoExistente != null) {
+                            Aluno novoCadastro = dadosNovoAluno();
+                            if (novoCadastro != null) {
+                                boolean atualizado = cadAluno.atualizarAluno(matricula, novoCadastro);
+                                if (atualizado) {
+                                    JOptionPane.showMessageDialog(null, "Cadastro atualizado.");
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Erro ao atualizar o cadastro.");
+                                }
+                            }
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
+                        }
+                    }
 
-                default -> JOptionPane.showMessageDialog(null, "Opção inválida. Tente novamente.");
-            }
-        } while (opcao != 0);
+                    case 4 -> {
+                        String matricula = lerMatricula();
+                        Aluno remover = cadAluno.pesquisarAluno(matricula);
+                        if (remover != null) {
+                            boolean removido = cadAluno.removerAluno(remover);
+                            if (removido) {
+                                JOptionPane.showMessageDialog(null, "Aluno removido do cadastro.");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Erro ao remover aluno.");
+                            }
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
+                        }
+                    }
+
+                    case 5 -> listarTodosAlunos(cadAluno);
+
+                    case 0 -> {
+                    }
+
+                    default -> JOptionPane.showMessageDialog(null, "Opção inválida. Tente novamente.");
+                }
+            } while (opcao != 0);
+        } catch (CampoEmBrancoException cbe) {
+            JOptionPane.showMessageDialog(null, cbe.getMessage());
+        }
     }
 
-    private static String lerMatricula() {
-        while (true) {
-            String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
-            if (matricula != null && matricula.matches("\\d{9}")) {
-                return matricula;
-            } else {
-                JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos.");
+    private static String lerMatricula()  throws CampoEmBrancoException {
+        try {
+            while (true) {
+                String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
+                if (matricula.matches("\\d{9}")) {
+                    return matricula;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos.");
+                }
             }
+        } catch (CampoEmBrancoException cbe) {
+            JOptionPane.showMessageDialog(null, "Erro: "+ cbe.getMessage());
         }
     }
 }
