@@ -135,7 +135,6 @@ public class MenuAluno {
 
                 switch (escolhido) {
                     case 1 -> {
-                        try {
                             Aluno novoAluno = dadosNovoAluno();
                             int resultado = cadAluno.cadastrarAluno(novoAluno);
                                 switch (resultado) {
@@ -145,9 +144,6 @@ public class MenuAluno {
                                             JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. CPF já existente.");
                                     default -> JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso.");
                                 }
-                            } catch (CampoEmBrancoException cbe) {
-                                JOptionPane.showMessageDialog(null, "Erro: " + cbe.getMessage());
-                        }
                     }
 
                     case 2 -> {
@@ -209,6 +205,9 @@ public class MenuAluno {
     private static String lerMatricula()  throws CampoEmBrancoException {
         while (true) {
             String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
+            if (matricula.isEmpty()) {
+                throw new CampoEmBrancoException("Você deixou a matrícula em branco");
+            }
             if (matricula.matches("\\d{9}")) {
                 return matricula;
             } else {
