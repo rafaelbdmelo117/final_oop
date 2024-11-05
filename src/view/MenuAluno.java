@@ -112,7 +112,7 @@ public class MenuAluno {
                 + "0 - Voltar para menu anterior";
         //txt e a String que 'conversa' com o usuario
 
-        int opcao = -1; //elemento de referencia para o switch e para o do while (neste ultimo, e para manter o programa rodando)
+        int escolhido; //elemento de referencia para o switch e para o do while (neste ultimo, e para manter o programa rodando)
         try {
             do {
                 String strEscolhido = JOptionPane.showInputDialog(txt);
@@ -121,19 +121,19 @@ public class MenuAluno {
                     return; //sai do metodo sem exibir 'opcao invalida'
                 }
 
-                if (strEscolhido.isEmpty()) {
-                    throw new CampoEmBrancoException("Você deixou um campo em branco");
+                if (strEscolhido.isEmpty()) { //se a String de escolha estiver vazia
+                    throw new CampoEmBrancoException("Você deixou um campo em branco"); //lanca uma CampoEmBrancoException
                 }
 
-                try {
-                    opcao = Integer.parseInt(strEscolhido);
-                } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha um número.");
-                    opcao = -1;
-                    continue;
+                try { //tenta converter o que o usuario digitou de String para int
+                    escolhido = Integer.parseInt(strEscolhido);
+                } catch (NumberFormatException e) { //se o usuario tiver digitado qualquer coisa que nao seja um numero inteiro, chama uma NumberFormatException
+                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha um número."); //exibe uma mensagem avisando que o que foi digitado nao foi um numero inteiro
+                    escolhido = -1; //define escolhido como -1 para que o loop seja reiniciado
+                    continue; //continua o loop (que vai recomecar do zero)
                 }
 
-                switch (opcao) {
+                switch (escolhido) {
                     case 1 -> {
                         try {
                             Aluno novoAluno = dadosNovoAluno();
@@ -200,7 +200,7 @@ public class MenuAluno {
 
                     default -> JOptionPane.showMessageDialog(null, "Opção inválida. Tente novamente.");
                 }
-            } while (opcao != 0);
+            } while (escolhido != 0);
         } catch (CampoEmBrancoException cbe) {
             JOptionPane.showMessageDialog(null, cbe.getMessage());
         }
