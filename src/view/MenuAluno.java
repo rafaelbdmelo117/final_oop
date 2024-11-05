@@ -11,6 +11,8 @@ public class MenuAluno {
 
     public static Aluno dadosNovoAluno() throws CampoEmBrancoException{ //metodo que cria uma interface para o usuario inserir os dados de cadastro de um aluno
                                             //seja para adicionar um novo aluno ou para atualizar um aluno
+
+        //os elementos abaixo configuram os campos que vao receber as informacoes do usuario
         JTextField nomeField = new JTextField(15);
         JTextField cpfField = new JTextField(11);
         JTextField emailField = new JTextField(20);
@@ -18,8 +20,9 @@ public class MenuAluno {
         JTextField cursoField = new JTextField(15);
 
         while (true) {
-            JPanel panel = new JPanel(new GridLayout(0, 2, 10, 10));
-            
+            JPanel panel = new JPanel(new GridLayout(0, 2, 10, 10)); //cria uma interface para receber os campos acima
+
+            //os elementos abaixo criam uma interface para o usuario interagir com os campos que foram criados
             panel.add(new JLabel("Nome:"));
             panel.add(nomeField);
             panel.add(new JLabel("CPF:"));
@@ -31,14 +34,17 @@ public class MenuAluno {
             panel.add(new JLabel("Curso:"));
             panel.add(cursoField);
 
+            //botao ok ou cancelar
             int result = JOptionPane.showConfirmDialog(null, panel, "Dados do Novo Aluno", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
 
-            if (result == JOptionPane.OK_OPTION) {
-                String nome = nomeField.getText();
-                if (nome.isEmpty()) {
-                    throw new CampoEmBrancoException("Você deixou o campo 'Nome' em branco");
+            if (result == JOptionPane.OK_OPTION) { //se o usuario apertar em ok, entra na parte de verificacao de dados inseridos para o novo aluno
+
+                String nome = nomeField.getText(); //o elemento nome recebe o que o usuario digitou no campo nomeField
+                if (nome.isEmpty()) { //verifica se o campo ficou em branco
+                    throw new CampoEmBrancoException("Você deixou o campo 'Nome' em branco"); //lanca a CampoEmBrancoException
                 }
+                //o mesmo processo descrito acima se repete para cada um dos campos
 
                 String cpf = cpfField.getText();
                 if (cpf.isEmpty()) {
@@ -60,15 +66,15 @@ public class MenuAluno {
                     throw new CampoEmBrancoException("Você deixou o campo 'Curso' em branco");
                 }
 
-                boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
-                boolean cpfValido = cpf.matches("\\d{11}");
-                boolean emailValido = email.contains("@");
-                boolean matriculaValida = matricula.matches("\\d{9}");
-                boolean cursoValido = curso.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
+                boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}"); //aceita letras, acentos e alguns caracteres especiais
+                boolean cpfValido = cpf.matches("\\d{11}"); //aceita 11 digitos
+                boolean emailValido = email.contains("@"); //so valida o email se este possuir @
+                boolean matriculaValida = matricula.matches("\\d{9}"); //aceita 9 digitos
+                boolean cursoValido = curso.matches("[\\p{L} .'-]{4,}"); //aceita letras, acentos e alguns caracteres especiais
 
-                if (nomeValido && cpfValido && emailValido && matriculaValida && cursoValido) {
-                    return new Aluno(nome, cpf, email, matricula, curso);
-                } else {
+                if (nomeValido && cpfValido && emailValido && matriculaValida && cursoValido) { //verifica se tudo esta validado
+                    return new Aluno(nome, cpf, email, matricula, curso); //retorna um novo objeto aluno com os dados passados
+                } else { //cria uma mensagem de erro especifica para cada problema
                     StringBuilder mensagemErro = new StringBuilder("Dados inválidos:\n");
                     if (!nomeValido) mensagemErro.append(" - Nome deve conter pelo menos 4 caracteres e pode incluir letras acentuadas e caracteres especiais como espaço, ponto, apóstrofo e hífen.\n");
                     if (!cpfValido) mensagemErro.append(" - CPF deve conter 11 dígitos.\n");
@@ -77,26 +83,26 @@ public class MenuAluno {
                     if (!cursoValido) mensagemErro.append(" - Curso deve conter pelo menos 4 caracteres e pode incluir letras acentuadas e caracteres especiais.\n");
                     JOptionPane.showMessageDialog(null, mensagemErro.toString());
                 }
-            } else {
+            } else { //se o usuario aperta em cancelar, retorna null
                 return null;
             }
         }
     }
 
-    private static void listarTodosAlunos(CadastroAluno cadAluno) {
-        List<Aluno> alunos = cadAluno.listarTodosAlunos();
-        if (alunos.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado.");
-        } else {
-            StringBuilder listaAlunos = new StringBuilder("Alunos cadastrados:\n\n");
-            for (Aluno aluno : alunos) {
-                listaAlunos.append(aluno.toString()).append("\n");
+    private static void listarTodosAlunos(CadastroAluno cadAluno) { //metodo que exibe uma lista na interface para ver todos os alunos
+        List<Aluno> alunos = cadAluno.listarTodosAlunos(); //cria uma lista de alunos que recebe a lista de alunos cadastrada (a .listarTodosAlunos() vem de CadastroAluno)
+        if (alunos.isEmpty()) { //verifica se a lista esta vazia
+            JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado."); //exibe uma mensagem informando que a lista esta vazia
+        } else { //caso a lista nao esteja vazia
+            StringBuilder listaAlunos = new StringBuilder("Alunos cadastrados:\n\n"); //usa a classe StringBuilder para criar um novo objeto StringBuilder referenciado por listaAlunos
+            for (Aluno aluno : alunos) { //itera sobre toda a lista de alunos
+                listaAlunos.append(aluno.toString()).append("\n"); //adiciona as informacoes de cada aluno para a lista a ser exibida na interface do usuario
             }
-            JOptionPane.showMessageDialog(null, listaAlunos.toString(), "Lista de Alunos", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, listaAlunos.toString(), "Lista de Alunos", JOptionPane.INFORMATION_MESSAGE); //exibe a lista completa
         }
     }
 
-    public static void MenuAluno(CadastroAluno cadAluno) throws CampoEmBrancoException {
+    public static void MenuAluno(CadastroAluno cadAluno) throws CampoEmBrancoException { //metodo que exibe o menu de opcoes para alunos ao usuario
         String txt = "Informe a opção desejada \n"
                 + "1 - Cadastrar aluno\n"
                 + "2 - Pesquisar aluno\n"
@@ -104,21 +110,26 @@ public class MenuAluno {
                 + "4 - Remover aluno\n"
                 + "5 - Ver todos os alunos do sistema\n"
                 + "0 - Voltar para menu anterior";
+        //txt e a String que 'conversa' com o usuario
 
-        int opcao = -1;
+        int opcao = -1; //elemento de referencia para o switch e para o do while (neste ultimo, e para manter o programa rodando)
         try {
             do {
-                String strOpcao = JOptionPane.showInputDialog(txt);
+                String strEscolhido = JOptionPane.showInputDialog(txt);
 
-                // Verifica se o usuário clicou em "Cancelar" ou fechou a janela
-                if (strOpcao == null) {
-                    return; //Sai do método sem exibir "Opção inválida"
+                if (strEscolhido == null) { //verifica se o usuario clicou em 'cancelar' ou fechou a janela
+                    return; //sai do metodo sem exibir 'opcao invalida'
+                }
+
+                if (strEscolhido.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou um campo em branco");
                 }
 
                 try {
-                    opcao = Integer.parseInt(strOpcao);
+                    opcao = Integer.parseInt(strEscolhido);
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha um número.");
+                    opcao = -1;
                     continue;
                 }
 
