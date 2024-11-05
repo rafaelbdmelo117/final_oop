@@ -113,9 +113,9 @@ public class MenuAluno {
         //txt e a String que 'conversa' com o usuario
 
         int escolhido; //elemento de referencia para o switch e para o do while (neste ultimo, e para manter o programa rodando)
-        try {
-            do {
-                String strEscolhido = JOptionPane.showInputDialog(txt);
+        try { //esse try aqui vai detectar se em algum momento um campo ficar em branco e vai jogar para o catch
+            do { //esse loop mantem o metodo funcionando para que o usuario possa interagir com os menus. tambem permite que o programa resete caso ele caia em algum erro
+                String strEscolhido = JOptionPane.showInputDialog(txt); //recebe a escolha do usuario como uma String
 
                 if (strEscolhido == null) { //verifica se o usuario clicou em 'cancelar' ou fechou a janela
                     return; //sai do metodo sem exibir 'opcao invalida'
@@ -133,85 +133,86 @@ public class MenuAluno {
                     continue; //continua o loop (que vai recomecar do zero)
                 }
 
-                switch (escolhido) {
-                    case 1 -> {
-                            Aluno novoAluno = dadosNovoAluno();
-                            int resultado = cadAluno.cadastrarAluno(novoAluno);
-                                switch (resultado) {
-                                    case -1 ->
-                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. Matrícula já existente.");
-                                    case -2 ->
-                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. CPF já existente.");
-                                    default -> JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso.");
+                switch (escolhido) { //define o caminho que sera tomado a partir da escolha do usuario
+                    case 1 -> { //entra no cadastro de um novo aluno
+                            Aluno novoAluno = dadosNovoAluno(); //puxa o metodo dadosNovoAluno para exibir uma interface na qual o usuario insere os dados
+                            int resultado = cadAluno.cadastrarAluno(novoAluno); //joga os dados para o metodo cadastrarAluno de CadastroAluno e armazena o retorno num elemento int
+                                                                                // que sera testado
+                                switch (resultado) { //testa o que o metodo cadastrarAluno retornou
+                                    case -1 -> //erro de matricula ja existente (conf. linha 20 da classe CadastroAluno)
+                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. Matrícula já existente."); //mensagem de matricula ja existente
+                                    case -2 -> //erro de cpf ja existente (conf. linha 23 da classe CadastroAluno)
+                                            JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno. CPF já existente."); //mensagem de cpf ja existente
+                                    default -> JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso."); //aqui o metodo retornou o tamanho da lista de alunos, ou seja, sucesso
                                 }
                     }
 
-                    case 2 -> {
-                        String matricula = lerMatricula();
-                        Aluno a = cadAluno.pesquisarAluno(matricula);
-                        if (a != null) {
-                            JOptionPane.showMessageDialog(null, a.toString());
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Aluno não encontrado.");
+                    case 2 -> { //entra na pesquisa de um aluno (cadastrado ou nao)
+                        String matricula = lerMatricula(); //chama o metodo letMatricula desta mesma classe para receber a matricula que o usuario deseja inserir
+                        Aluno a = cadAluno.pesquisarAluno(matricula); //chama o metodo pesquisarAluno da classe CadastroAluno passando a matricula inserida pelo usuario como parametro
+                        if (a != null) { //se a matricula existe na lista do cadastro
+                            JOptionPane.showMessageDialog(null, a.toString()); //passa as informacoes do aluno para uma String e exibe para o usuario
+                        } else { //se a matricula nao for encontrada
+                            JOptionPane.showMessageDialog(null, "Aluno não encontrado."); //mensagem indicando que a matricula nao esta cadastrada
                         }
                     }
 
-                    case 3 -> {
-                        String matricula = lerMatricula();
-                        Aluno alunoExistente = cadAluno.pesquisarAluno(matricula);
-                        if (alunoExistente != null) {
-                            Aluno novoCadastro = dadosNovoAluno();
-                            if (novoCadastro != null) {
-                                boolean atualizado = cadAluno.atualizarAluno(matricula, novoCadastro);
-                                if (atualizado) {
-                                    JOptionPane.showMessageDialog(null, "Cadastro atualizado.");
-                                } else {
-                                    JOptionPane.showMessageDialog(null, "Erro ao atualizar o cadastro.");
+                    case 3 -> { //entra na atualizacao de um aluno ja cadastrado (exclui aquele aluno e substitui por um novo)
+                        String matricula = lerMatricula(); //puxa a matricula que o usuario inseriu
+                        Aluno alunoExistente = cadAluno.pesquisarAluno(matricula); //procura pelo aluno, assim como no Case 2
+                        if (alunoExistente != null) { //se a matricula existir no cadastro
+                            Aluno novoCadastro = dadosNovoAluno(); //cria um novo aluno e chama o metodo dadosNovoAluno
+                            if (novoCadastro != null) { //se a matricula existe
+                                boolean atualizado = cadAluno.atualizarAluno(matricula, novoCadastro); //chama o metodo atualizarAluno da classe CadastroAluno
+                                if (atualizado) { //se o retorno for true
+                                    JOptionPane.showMessageDialog(null, "Cadastro atualizado."); //excluiu o antigo e inseriu o novo
+                                } else { //se o retorno for false
+                                    JOptionPane.showMessageDialog(null, "Erro ao atualizar o cadastro."); //nada ocorreu
                                 }
                             }
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
+                        } else { //se a matricula nao existe
+                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado."); //mensagem de que nao existe esse aluno a ser atualizado
                         }
                     }
 
-                    case 4 -> {
-                        String matricula = lerMatricula();
-                        Aluno remover = cadAluno.pesquisarAluno(matricula);
-                        if (remover != null) {
-                            boolean removido = cadAluno.removerAluno(remover);
-                            if (removido) {
-                                JOptionPane.showMessageDialog(null, "Aluno removido do cadastro.");
-                            } else {
-                                JOptionPane.showMessageDialog(null, "Erro ao remover aluno.");
+                    case 4 -> { //entra na remocao de um aluno ja cadastrado
+                        String matricula = lerMatricula(); //puxa a matricula que o usuario inseriu
+                        Aluno remover = cadAluno.pesquisarAluno(matricula); //chama o metodo pesquisarAluno da classe CadastroAluno
+                        if (remover != null) { //se a matricula existir no cadastro
+                            boolean removido = cadAluno.removerAluno(remover); //chama o metodo removerAluno da classe CadastroAluno e armazena o retorno num boolean
+                            if (removido) { //se o retorno for true
+                                JOptionPane.showMessageDialog(null, "Aluno removido do cadastro."); //informa que deu certo
+                            } else { //se o retorno for false
+                                JOptionPane.showMessageDialog(null, "Erro ao remover aluno."); //informa que nada ocorreu
                             }
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado.");
+                        } else { //se a matricula nao existir no cadastro
+                            JOptionPane.showMessageDialog(null, "Aluno com essa matrícula não encontrado."); //informa que nao existe aluno no cadastro
                         }
                     }
 
-                    case 5 -> listarTodosAlunos(cadAluno);
+                    case 5 -> listarTodosAlunos(cadAluno); //chama o metodo de listarTodosAlunos desta classe
 
-                    case 0 -> {
+                    case 0 -> { //sai do loop
                     }
 
-                    default -> JOptionPane.showMessageDialog(null, "Opção inválida. Tente novamente.");
+                    default -> JOptionPane.showMessageDialog(null, "Opção inválida. Tente novamente."); //caso o usuario digite uma opcao fora do escopo ou algo que nao seja um numero, informa
                 }
-            } while (escolhido != 0);
-        } catch (CampoEmBrancoException cbe) {
-            JOptionPane.showMessageDialog(null, cbe.getMessage());
+            } while (escolhido != 0); //fecha o loop quando o usuario digita 0
+        } catch (CampoEmBrancoException cbe) { //chama a CampoEmBrancoException quando o usuario deixa algum campo em branco
+            JOptionPane.showMessageDialog(null, cbe.getMessage()); //puxa a mensagem definida nos metodos
         }
     }
 
     private static String lerMatricula()  throws CampoEmBrancoException {
-        while (true) {
-            String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
-            if (matricula.isEmpty()) {
-                throw new CampoEmBrancoException("Você deixou a matrícula em branco");
+        while (true) { //enquanto o usuario nao digitar um conjunto de numeros inteiros, o metodo roda
+            String matricula = JOptionPane.showInputDialog("Informe a matrícula do aluno: "); //recebe uma String com a matricula do aluno
+            if (matricula.isEmpty()) { //testa se o campo de matricula ficou vazio
+                throw new CampoEmBrancoException("Você deixou a matrícula em branco"); //lanca a CampoEmBrancoException
             }
-            if (matricula.matches("\\d{9}")) {
-                return matricula;
-            } else {
-                JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos.");
+            if (matricula.matches("\\d{9}")) { //se a matricula inserida tiver exatamente 9 digitos
+                return matricula; //retorna essa matricula
+            } else { //se a matricula nao tiver exatamente 9 digitos
+                JOptionPane.showMessageDialog(null, "Matrícula inválida. Deve conter 9 dígitos."); //mensagem de erro
             }
         }
     }
