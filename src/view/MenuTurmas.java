@@ -1,6 +1,7 @@
 package view;
 
 import app.Aluno;
+import app.CampoEmBrancoException;
 import app.Professor;
 import app.Turma;
 import cadastros.CadastroAluno;
@@ -143,7 +144,7 @@ public class MenuTurmas {
         }
     }
 
-    private static void adicionarOuRemoverAlunos(CadastroTurma cadTurma, CadastroAluno cadAluno) {
+    private static void adicionarOuRemoverAlunos(CadastroTurma cadTurma, CadastroAluno cadAluno) throws CampoEmBrancoException {
         String codTurma = lerCodigoTurma();
         if (codTurma == null) {
             return; // Sai se o usuário cancelar
@@ -215,7 +216,7 @@ public class MenuTurmas {
         } while (opcao < 0 || opcao > 2);
     }
 
-    public static void MenuTurma(CadastroTurma cadTurma, CadastroAluno cadAluno, CadastroProfessor cadProfessor) {
+    public static void MenuTurma(CadastroTurma cadTurma, CadastroAluno cadAluno, CadastroProfessor cadProfessor) throws CampoEmBrancoException{
         while (true) {
             String opcoes = """
                             Informe a op\u00e7\u00e3o desejada:

@@ -9,7 +9,8 @@ import javax.swing.*;
 
 public class MenuAluno {
 
-    public static Aluno dadosNovoAluno() throws CampoEmBrancoException {
+    public static Aluno dadosNovoAluno() throws CampoEmBrancoException{ //metodo que cria uma interface para o usuario inserir os dados de cadastro de um aluno
+                                            //seja para adicionar um novo aluno ou para atualizar um aluno
         JTextField nomeField = new JTextField(15);
         JTextField cpfField = new JTextField(11);
         JTextField emailField = new JTextField(20);
@@ -32,15 +33,31 @@ public class MenuAluno {
 
             int result = JOptionPane.showConfirmDialog(null, panel, "Dados do Novo Aluno", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
+
             if (result == JOptionPane.OK_OPTION) {
                 String nome = nomeField.getText();
-                String cpf = cpfField.getText();
-                String email = emailField.getText();
-                String matricula = matriculaField.getText();
-                String curso = cursoField.getText();
+                if (nome.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o campo 'Nome' em branco");
+                }
 
-                if (nome.isEmpty() || cpf.isEmpty() || email.isEmpty() || matricula.isEmpty() || curso.isEmpty()) {
-                    throw new CampoEmBrancoException("Você deixou um ou mais campos em branco.");
+                String cpf = cpfField.getText();
+                if (cpf.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o campo 'CPF' em branco");
+                }
+
+                String email = emailField.getText();
+                if (email.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o campo 'Email' em branco");
+                }
+
+                String matricula = matriculaField.getText();
+                if (matricula.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o campo 'Matrícula' em branco");
+                }
+
+                String curso = cursoField.getText();
+                if (curso.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o campo 'Curso' em branco");
                 }
 
                 boolean nomeValido = nome.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
@@ -48,7 +65,7 @@ public class MenuAluno {
                 boolean emailValido = email.contains("@");
                 boolean matriculaValida = matricula.matches("\\d{9}");
                 boolean cursoValido = curso.matches("[\\p{L} .'-]{4,}"); // Aceita letras, acentos e alguns caracteres especiais
-                
+
                 if (nomeValido && cpfValido && emailValido && matriculaValida && cursoValido) {
                     return new Aluno(nome, cpf, email, matricula, curso);
                 } else {
