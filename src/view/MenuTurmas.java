@@ -14,7 +14,7 @@ import javax.swing.*;
 
 public class MenuTurmas {
 
-    public static Turma dadosNovaTurma() {
+    public static Turma dadosNovaTurma() throws CampoEmBrancoException {
         JTextField codTurmaField = new JTextField(3);
         JTextField salaField = new JTextField(3);
         JTextField matriculaFUBField = new JTextField(30);
@@ -37,11 +37,24 @@ public class MenuTurmas {
             int confirma = JOptionPane.showConfirmDialog(null, painel, "Dados da nova turma", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
             if (confirma == JOptionPane.OK_OPTION) {
+
                 String codTurma = codTurmaField.getText();
+                if (codTurma.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou o código da turma em branco.");
+                }
+
                 String sala = salaField.getText();
-                String matriculaFUB = matriculaFUBField.getText();
-                String codDisciplina = codigoDiscField.getText();
+                if (sala.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou a sala em branco.");
+                }
+
+                String matriculaFUB = matriculaFUBField.getText(); //aqui sera necessario usar a ProfessorNaoAtribuidoException
+                String codDisciplina = codigoDiscField.getText(); //aqui sera necessario usar a DisciplinaNaoAtribuidaException
+
                 String recebeQtdMaxAlunos = qtdMaxAlunosField.getText();
+                if (recebeQtdMaxAlunos.isEmpty()) {
+                    throw new CampoEmBrancoException("Você deixou a quantidade de alunos em branco.");
+                }
 
                 boolean codTurmaValido = codTurma.matches("^[Tt][A-Za-z0-9]{2}$");
                 boolean salaValida = sala.length() >= 2;
@@ -77,7 +90,7 @@ public class MenuTurmas {
         }
     }
     
-    private static void imprimirChamada(CadastroTurma cadTurma, CadastroProfessor cadProfessor) {
+    private static void imprimirChamada(CadastroTurma cadTurma, CadastroProfessor cadProfessor) throws CampoEmBrancoException{
         String codTurma = lerCodigoTurma();
         if (codTurma == null) {
             return; // Sai se o usuário cancelar
@@ -117,11 +130,14 @@ public class MenuTurmas {
 
 
     
-    private static String lerCodigoTurma() {
+    private static String lerCodigoTurma() throws CampoEmBrancoException{
         while (true) {
             String codTurma = JOptionPane.showInputDialog("Insira o código da turma (Formato: TXX):");
             if (codTurma == null) {
                 return null; // Trata o caso do botão "Cancelar"
+            }
+            if (codTurma.isEmpty()) {
+                throw new CampoEmBrancoException("Você deixou o código da turma em branco");
             }
             if (codTurma.matches("^[Tt][A-Za-z0-9]{2}$")) { // Valida o formato do código da turma
                 return codTurma;
@@ -156,7 +172,7 @@ public class MenuTurmas {
         }
 
         String opcoes = """
-                        Informe a op\u00e7\u00e3o desejada:
+                        Informe a opção desejada:
                         1 - Adicionar aluno
                         2 - Remover aluno
                         0 - Voltar""";
@@ -228,73 +244,83 @@ public class MenuTurmas {
                             6 - Imprima a Chamada da Turma
                             0 - Voltar""";
             int opcao = -1;
-            do {
-                String strOpcao = JOptionPane.showInputDialog(opcoes);
-                if (strOpcao == null) {
-                    return; // Trata o caso do botão "Cancelar"
-                }
-                try {
-                    opcao = Integer.parseInt(strOpcao);
-                } catch (NumberFormatException n) {
-                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, insira um dígito válido.");
-                    continue;
-                }
+            try {
+                do {
+                    String strOpcao = JOptionPane.showInputDialog(opcoes);
+                    if (strOpcao == null) {
+                        return; // Trata o caso do botão "Cancelar"
+                    }
+                    try {
+                        opcao = Integer.parseInt(strOpcao);
+                    } catch (NumberFormatException n) {
+                        JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, insira um dígito válido.");
+                        continue;
+                    }
 
-                switch (opcao) {
-                    case 1 -> {
-                        Turma novaTurma = dadosNovaTurma();
-                        if (novaTurma != null) {
-                            int sucesso = cadTurma.cadastrarTurma(novaTurma);
-                            switch (sucesso) {
-                                case -3 -> JOptionPane.showMessageDialog(null, "Erro: Já existe uma turma cadastrada com esse código. Por favor, insira um código de turma diferente.");
-                                case -4 -> JOptionPane.showMessageDialog(null, "Erro: A disciplina associada à turma não foi encontrada.");
-                                case -5 -> JOptionPane.showMessageDialog(null, "Erro: Não há professores cadastrados no sistema. Por favor, cadastre pelo menos um professor antes de adicionar uma turma.");
-                                case -6 -> JOptionPane.showMessageDialog(null, "Erro: Professor não encontrado com a matrícula fornecida. Verifique se a matrícula está correta ou cadastre o professor no sistema.");
-                                case -7 -> JOptionPane.showMessageDialog(null, "Erro: Ocorreu um erro ao cadastrar a turma. Tente novamente.");
-                                default -> JOptionPane.showMessageDialog(null, "Turma adicionada com sucesso.");
+                    switch (opcao) {
+                        case 1 -> {
+                            Turma novaTurma = dadosNovaTurma();
+                            if (novaTurma != null) {
+                                int sucesso = cadTurma.cadastrarTurma(novaTurma);
+                                switch (sucesso) {
+                                    case -3 ->
+                                            JOptionPane.showMessageDialog(null, "Erro: Já existe uma turma cadastrada com esse código. Por favor, insira um código de turma diferente.");
+                                    case -4 ->
+                                            JOptionPane.showMessageDialog(null, "Erro: A disciplina associada à turma não foi encontrada.");
+                                    case -5 ->
+                                            JOptionPane.showMessageDialog(null, "Erro: Não há professores cadastrados no sistema. Por favor, cadastre pelo menos um professor antes de adicionar uma turma.");
+                                    case -6 ->
+                                            JOptionPane.showMessageDialog(null, "Erro: Professor não encontrado com a matrícula fornecida. Verifique se a matrícula está correta ou cadastre o professor no sistema.");
+                                    case -7 ->
+                                            JOptionPane.showMessageDialog(null, "Erro: Ocorreu um erro ao cadastrar a turma. Tente novamente.");
+                                    default -> JOptionPane.showMessageDialog(null, "Turma adicionada com sucesso.");
+                                }
                             }
                         }
-                    }
-                    case 2 -> {
-                        String codigoTurma = lerCodigoTurma();
-                        if (codigoTurma == null) {
-                            break; // Sai do loop se o usuário cancelar
-                        }
-                        Turma excluir = cadTurma.procurarTurma(codigoTurma);
-                        if (excluir != null) {
-                            boolean apagou = cadTurma.excluirTurma(excluir);
-                            if (apagou) {
-                                JOptionPane.showMessageDialog(null, "Turma removida do sistema com sucesso.");
+                        case 2 -> {
+                            String codigoTurma = lerCodigoTurma();
+                            if (codigoTurma == null) {
+                                break; // Sai do loop se o usuário cancelar
+                            }
+                            Turma excluir = cadTurma.procurarTurma(codigoTurma);
+                            if (excluir != null) {
+                                boolean apagou = cadTurma.excluirTurma(excluir);
+                                if (apagou) {
+                                    JOptionPane.showMessageDialog(null, "Turma removida do sistema com sucesso.");
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Erro: Não foi possível remover a turma. Tente novamente.");
+                                }
                             } else {
-                                JOptionPane.showMessageDialog(null, "Erro: Não foi possível remover a turma. Tente novamente.");
+                                JOptionPane.showMessageDialog(null, "Erro: Não foi encontrada turma com esse código.");
                             }
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Erro: Não foi encontrada turma com esse código.");
                         }
-                    }
-                    case 3 -> adicionarOuRemoverAlunos(cadTurma, cadAluno);
-                    case 4 -> {
-                        String codTur = lerCodigoTurma();
-                        if (codTur == null) {
-                            break; // Sai do loop se o usuário cancelar
+                        case 3 -> adicionarOuRemoverAlunos(cadTurma, cadAluno);
+                        case 4 -> {
+                            String codTur = lerCodigoTurma();
+                            if (codTur == null) {
+                                break; // Sai do loop se o usuário cancelar
+                            }
+                            Turma turmaProcura = cadTurma.procurarTurma(codTur);
+                            if (turmaProcura != null) {
+                                JOptionPane.showMessageDialog(null, turmaProcura.toString());
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Erro: Turma não cadastrada.");
+                            }
                         }
-                        Turma turmaProcura = cadTurma.procurarTurma(codTur);
-                        if (turmaProcura != null) {
-                            JOptionPane.showMessageDialog(null, turmaProcura.toString());
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Erro: Turma não cadastrada.");
-                        }
-                    }
-                    case 5 -> listarTurmasCadastradas(cadTurma);
-                    
-                    case 6 -> imprimirChamada(cadTurma, cadProfessor);
+                        case 5 -> listarTurmasCadastradas(cadTurma);
 
-                    case 0 -> {
-                        return;
+                        case 6 -> imprimirChamada(cadTurma, cadProfessor);
+
+                        case 0 -> {
+                            return;
+                        }
+                        default ->
+                                JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, insira um dígito válido.");
                     }
-                    default -> JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, insira um dígito válido.");
-                }
-            } while (opcao < 0 || opcao > 5);
+                } while (opcao < 0 || opcao > 5);
+            } catch (CampoEmBrancoException cbe) {
+                JOptionPane.showMessageDialog(null, cbe.getMessage());
+            }
         }
     }
 }
