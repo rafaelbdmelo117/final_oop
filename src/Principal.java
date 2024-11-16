@@ -1,4 +1,6 @@
 import app.CampoEmBrancoException;
+import app.DisciplinaNaoAtribuidaException;
+import app.ProfessorNaoAtribuidoException;
 import cadastros.*;
 import javax.swing.JOptionPane;
 import view.*;
@@ -42,7 +44,11 @@ public class Principal {
 			} while (escolhido != 0);
 		} catch (CampoEmBrancoException cbe) {
 			JOptionPane.showMessageDialog(null, "Erro: " + cbe.getMessage()); //puxa a mensagem de excecao la no tratamento do MenuPrincipal
-		}
-		return;
+		} catch (ProfessorNaoAtribuidoException pna) {
+            JOptionPane.showMessageDialog(null, "Erro: " + pna.getMessage());
+        } catch (DisciplinaNaoAtribuidaException dna) {
+            JOptionPane.showMessageDialog(null, "Erro: " + dna.getMessage());
+        }
+        return;
 	}
 }

@@ -1,4 +1,8 @@
 package app;
 
-public class DisciplinaNaoAtribuidaException {
+public class DisciplinaNaoAtribuidaException extends Exception {
+
+    public DisciplinaNaoAtribuidaException(String mensagem) {
+        super(mensagem);
+    }
 }
