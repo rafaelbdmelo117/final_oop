@@ -27,8 +27,8 @@ Correção do TP
 Observações gerais 
  - Nenhuma das classes de exceção foram criadas. (-15 pontos) - Resolvido
  - Cadastros professor e aluno permitem campo e-mail em branco. (-20 pontos) - Resolvido
- - Não há tratamento de exceções. (-20 pontos) - Parcialmente resolvido (até agora)
- - Diagrama UML não apresentou as classes de exceção (-15 pontos) 
+ - Não há tratamento de exceções. (-20 pontos) - Parcialmente resolvido (até agora) - Resolvido
+ - Diagrama UML não apresentou as classes de exceção (-15 pontos)  - Resolvido
 
 Critério 1 Classes de exceção (15 pontos)
  - As classes de exceção CampoEmBrancoException,
